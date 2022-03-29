@@ -1,18 +1,13 @@
-package download;
+package milestone5;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.*;
+import java.net.*;
 
 public class DownloadWeb {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		URL url=null;
+		URL url = null;
 		BufferedReader reader = null;
 		BufferedWriter writer = null;
 		String line;
@@ -22,7 +17,7 @@ public class DownloadWeb {
 			reader = new BufferedReader(new InputStreamReader(url.openStream()));
 			writer = new BufferedWriter(new FileWriter("data.html"));
 			while ((line = reader.readLine()) != null) {
-				System.out.println(line+"\n");
+				System.out.println(line + "\n");
 				writer.write(line);
 				writer.newLine();
 			}
